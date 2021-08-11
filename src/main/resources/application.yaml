@@ -1,0 +1,3 @@
+server:  port: 8093spring:  h2:    console:      enabled: true  datasource:     url: jdbc:h2:mem:dbservice     username: secure     password: secure  jpa:    database-platform: org.hibernate.dialect.H2Dialect  application:    name: product-service      
+ #Eureka server mappingeureka:  instance:    instance-id: ${spring.application.name}.${random.int}    lease-expiration-duration-in-seconds: 2    lease-renewal-interval-in-seconds: 1  client:    service-url:      defaultZone: http://localhost:8101/eureka   
+   
